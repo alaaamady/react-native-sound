@@ -35,6 +35,11 @@ public class RNSoundModule extends ReactContextBaseJavaModule implements AudioMa
   Double focusedPlayerKey;
   Boolean wasPlayingBeforeFocusChange = false;
 
+  @Override    
+  public boolean canOverrideExistingModule() {        
+    return true;    
+  } 
+
   public RNSoundModule(ReactApplicationContext context) {
     super(context);
     this.context = context;
